@@ -3,10 +3,13 @@ nav {
   justify-content: space-between;
 }
 
-figure {
+.cards {
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
 }
 
 h1,
@@ -21,19 +24,19 @@ h6 {
 }
 
 .transparent-button {
-background-color:transparent;
-border: 1px solid #000;
-width: 200px;
-color: #000;
-padding: 10pt 20pt ;
-font-size: 16px;
-cursor: pointer;
-transition: background-color 0.3s,color 0.3s;
+  background-color: transparent;
+  border: 1px solid #000;
+  width: 200px;
+  color: #000;
+  padding: 10pt 20pt;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .transparent-button:hover {
-background-color: #18B5DC;
-color: #fff;
+  background-color: #18B5DC;
+  color: #fff;
 }
 
 .header a {
@@ -45,22 +48,22 @@ color: #fff;
   font-weight: 400;
   padding: var(--padding);
   white-space: nowrap;
-  transition: background-color 0.3s,color 0.3s;
+  transition: background-color 0.3s, color 0.3s
 }
 
 .header ul {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    list-style: none;
-    gap: var(--gap);
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  gap: var(--gap);
 }
 
-a{
-color: black;
-transition: color 0.3s ease;
+a {
+  color: black;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -74,6 +77,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
 }
 
 footer ul {
@@ -86,21 +90,14 @@ footer ul {
   gap: var(--gap);
   list-style: none;
   margin-bottom: var(--element-button);
-  
 }
 
 footer ul img {
   background: inherit;
   transition: var(--transition);
   cursor: pointer;
-  width: 40px;
-  height: 40px;
   object-fit: cover;
   object-position: center;
-}
-
-footer ul img:hover {
-  transform: scale(1.2);
 }
 
 footer p {
@@ -110,4 +107,32 @@ footer p {
   line-height: 19.07px;
   text-align: center;
   margin-bottom: var(--element-button);
+}
+
+.social a {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #18B5DC;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transition: 50ms;
+}
+
+.social a:hover {
+  background: #18B5DC;
+}
+
+.social img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 50ms;
+}
+
+a:not(:hover)>.white,
+a:hover>:not(.white){
+  opacity: 0;
 }
